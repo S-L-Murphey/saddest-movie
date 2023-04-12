@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="text-red-200 text-2xl">Hello World</div>
+      <div className="text-red-200 text-2xl">Did U Cry? :(</div>
       <main className="flex min-h-screen flex-col items-center justify-center">
           
           <p className="text-2xl text-red-200">
