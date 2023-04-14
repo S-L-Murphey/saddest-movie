@@ -2,14 +2,16 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "@component/server/api/trpc";
 
-export const exampleRouter = createTRPCRouter({
-  hello: publicProcedure
-    .input(z.object({ text: z.string() }))
+export const movieRouter = createTRPCRouter({
+
+  movie: publicProcedure
+    .input(z.object({ id: z.string().optional() }))
     .query(({ input }) => {
       return {
-        greeting: `Hello ${input.text}`,
+        movie: `Hello ${input.id}`,
       };
     }),
+
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.example.findMany();
   }),

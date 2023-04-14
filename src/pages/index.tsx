@@ -5,8 +5,8 @@ import { getMovieForVote } from "@component/utils/getRandomMovie";
 
 const Home: NextPage = () => {
 
-  const [movie, setMovie] = useState<string | number | undefined>('')
-  const hello = api.example.hello.useQuery({ text: "from Nashville" });
+  const [movie, setMovie] = useState<string | undefined>('')
+  const randomMovie = api.movie.movie.useQuery({ id: movie });
 
   const [movieForVote] = getMovieForVote();
 
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           <button className="text-2xl text-red-200">No</button>
         </div>
         <p className="text-2xl text-red-200">
-          {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+          {randomMovie.data ? randomMovie.data.movie : "Loading tRPC query..."}
         </p>
       </main>
     </>

@@ -1,5 +1,5 @@
-export const getRandomMovie: (notThisOne?: number) => number | string = (notThisOne) => {
-    const movieId = Math.floor(Math.random() * (10000000 - 0 + 1) + 0);
+export const getRandomMovie: (notThisOne?: string) =>  string = (notThisOne) => {
+    const movieId = Math.floor(Math.random() * (10000000 - 0 + 1) + 0).toString();
 
     const idPrefix = 'tt';
 
