@@ -8,7 +8,7 @@ export const movieRouter = createTRPCRouter({
     .input(z.object({ id: z.string().optional() }))
     .query(({ input }) => {
       return {
-        movie: `Hello ${input.id}`,
+        movie: `${input.id}`,
       };
     }),
 
