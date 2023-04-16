@@ -18,7 +18,7 @@ const Home: NextPage = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'fc074b6150msh0602420427defdep1b7ccdjsn3910e3e313f2',
+        'X-RapidAPI-Key': '',
         'X-RapidAPI-Host': 'movie-database-alternative.p.rapidapi.com'
       }
     };
