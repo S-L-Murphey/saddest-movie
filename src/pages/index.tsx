@@ -4,12 +4,14 @@ import { api } from "@component/utils/api";
 import { getMovieForVote } from "@component/utils/getRandomMovie";
 
 const Home: NextPage = () => {
-  const [movie, setMovie] = useState<string | undefined>('')
+  const [movie, setMovie] = useState<string>('')
   const [movieForVote] = getMovieForVote();
   const [movieData, setMovieData] = useState<any>()
 
   useEffect(() => {
-    setMovie(movieForVote);
+    if (movieForVote) {
+      setMovie(movieForVote);
+    }
   }, []);
 
   // const randomMovie = api.movie.movie.useQuery({ id: movie });
