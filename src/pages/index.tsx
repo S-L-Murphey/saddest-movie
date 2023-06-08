@@ -1,12 +1,11 @@
 import { type NextPage } from "next";
 import { useEffect, useState } from "react";
-import { api } from "@component/utils/api";
 import { getMovieForVote } from "@component/utils/getRandomMovie";
 
 const Home: NextPage = () => {
   const [movie, setMovie] = useState<string>('')
   const [movieForVote] = getMovieForVote();
-  const [movieData, setMovieData] = useState<any>()
+ //const [movieData, setMovieData] = useState<any>()
 
   useEffect(() => {
     if (movieForVote) {
@@ -40,7 +39,6 @@ const Home: NextPage = () => {
         <div className="text-2xl text-red-200 mb-4">Did You Cry?</div>
         <div className="p-10 border border-white">
           <div className="text-2xl text-red-200">
-            <img src={movieData?.Poster} />
           </div>
         </div>
         <div className="flex">
