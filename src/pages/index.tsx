@@ -12,22 +12,24 @@ const Home: NextPage = () => {
     setMovie(movieForVote);
   }, []);
 
-  const randomMovie = api.movie.movie.useQuery({ id: movie });
+  // const randomMovie = api.movie.movie.useQuery({ id: movie });
 
-  useEffect(() => {
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '',
-        'X-RapidAPI-Host': 'movie-database-alternative.p.rapidapi.com'
-      }
-    };
+  // useEffect(() => {
+  //   const options = {
+  //     method: 'GET',
+  //     headers: {
+  //       'X-RapidAPI-Key': '',
+  //       'X-RapidAPI-Host': 'movie-database-alternative.p.rapidapi.com'
+  //     }
+  //   };
 
-    fetch(`https://movie-database-alternative.p.rapidapi.com/?r=json&i=${movie}&type=movie`, options)
-      .then(response => response.json())
-      .then(response => setMovieData(response))
-      .catch(err => console.error(err));
-  }, [movie])
+  //   fetch(`https://movie-database-alternative.p.rapidapi.com/?r=json&i=${movie}&type=movie`, options)
+  //     .then(response => response.json())
+  //     .then(response => setMovieData(response))
+  //     .catch(err => console.error(err));
+  // }, [movie])
+
+  console.log(movie)
 
   return (
     <>
